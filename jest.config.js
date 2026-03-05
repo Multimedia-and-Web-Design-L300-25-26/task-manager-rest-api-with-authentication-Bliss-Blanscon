@@ -1,3 +1,4 @@
+// jest.config.js
 export default {
   preset: null,
   testEnvironment: "node",
@@ -7,5 +8,6 @@ export default {
   ],
   testTimeout: 30000,
   forceExit: true,
-  detectOpenHandles: false
+  detectOpenHandles: false,
+  setupFilesAfterEnv: ["<rootDir>/tests/setup.js"] // ✅ add this
 };
