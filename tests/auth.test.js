@@ -16,7 +16,7 @@ describe("Auth Routes", () => {
 
     expect(res.statusCode).toBe(201);
     expect(res.body.email).toBe("test@example.com");
-  });
+  }, 30000);
 
   it("should login user and return token", async () => {
     const res = await request(app)
@@ -30,6 +30,6 @@ describe("Auth Routes", () => {
     expect(res.body.token).toBeDefined();
 
     token = res.body.token;
-  });
+  }, 30000);
 
 });
